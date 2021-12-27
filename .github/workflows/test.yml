@@ -1,2 +1,8 @@
-Sample yml file
-excited
+# Github jobs: name -> on -> jobs (list of jobs to be executed)
+name: My Github Aciton
+on: [push]
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World!!"
