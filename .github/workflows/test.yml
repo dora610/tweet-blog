@@ -1,8 +1,10 @@
-# Github jobs: name -> on -> jobs (list of jobs to be executed)
-name: My Github Aciton
+# A worflow that installs node on latest ubuntu and show file structure of the repo
+name: Node-app-action
 on: [push]
 jobs:
-  print-hello-world:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello World!!"
+  show-directory-tree
+  runs-on: ubuntu-latest
+  steps:
+    # for action -> uses, for shell script -> run
+    - uses: actions/checkout@v2
+    - run: tree
