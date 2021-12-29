@@ -3,8 +3,8 @@ name: Node-app-action
 on: [push]
 jobs:
   show-directory-tree:
-  runs-on: ubuntu-latest
-  steps:
-    # for action -> uses, for shell script -> run
-    - uses: actions/checkout@v2
-    - run: tree
+    runs-on: ubuntu-latest
+    steps:
+      # for action -> uses, for shell script -> run
+      - uses: actions/checkout@v2
+      - run: tree
